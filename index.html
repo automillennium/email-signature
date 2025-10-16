@@ -1,238 +1,110 @@
+
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="margin: 0; padding: 0; box-sizing: border-box; min-height: 100%; overflow-x: hidden;">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Email Signature</title>
     <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
+@media (max-width: 600px) {
+  body {
+    overflow-x: hidden !important;
+  }
 
-      body,
-      html {
-        min-height: 100%;
-      }
+  main {
+    max-width: 400px;
+    padding-inline: 0 !important;
+    margin: 0 auto !important;
+  }
 
-      main {
-        padding-inline: 60px;
-        width: 100%;
-        max-width: 948px;
-        margin: 0 auto;
-        color: black !important;
-        font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
-      }
+  .content-container {
+    transform: scale(0.5);
+    transform-origin: top left;
+    width: 200%;
+    overflow: hidden;
+  }
 
-      .hedaer {
-        width: 100%;
-        height: auto;
-        object-fit: contain;
-        height: 85px;
-      }
+  .hedaer {
+    height: 48px !important;
+  }
 
-      .footer {
-        display: flex;
-        justify-content: center;
-        gap: 10px;
-      }
+  .details-row {
+    gap: 6px !important;
+  }
 
-      .section_one {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 3px;
-        padding-top: 20px;
-        color: black !important;
-      }
+  .details_icon {
+    width: 16px !important;
+    height: 16px !important;
+  }
 
-      .details-row {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        width: 100%;
-      }
+  .details-row p {
+    font-size: 8px !important;
+    line-height: 1.2 !important;
+  }
 
-      .details_icon {
-        width: 40px;
-        height: 40px;
-        object-fit: contain;
-        flex-shrink: 0;
-      }
+  .person {
+    font-size: 18px !important;
+    line-height: 1.2 !important;
+  }
 
-      .details-row p {
-        margin: 0;
-        line-height: 1.5;
-        white-space: nowrap;
-        font-size: 14px;
-        font-weight: bold;
-      }
+  .desig {
+    font-size: 10px !important;
+    line-height: 1.2 !important;
+  }
 
-      .details-row img {
-        width: 30px;
-        height: 23px;
-        object-fit: contain;
-      }
+  .section_one {
+    padding-top: 10px !important;
+  }
 
-      .details-two {
-        display: flex;
-        flex-direction: column;
-        gap: 0px;
-      }
-
-      .details-two p {
-        font-size: 18px;
-        font-weight: bold;
-        line-height: 1.5;
-        white-space: nowrap;
-        margin: 0;
-      }
-
-      .section_two {
-        flex: 1;
-        width: 100%;
-        padding-top: 50px;
-        position: relative;
-      }
-
-      .person {
-        font-size: 40px;
-        font-weight: bold;
-        text-transform: uppercase;
-      }
-
-      .desig {
-        font-size: 22px;
-        font-weight: bolder;
-        text-transform: uppercase;
-      }
-
-      .adressImg {
-        object-fit: contain;
-        width: 100%;
-      }
-
-      .places {
-        font-weight: 900;
-        font-size: 40px;
-      }
-
-      .line-border {
-        height: 80%;
-        width: 60%;
-        border-top: 2px solid black;
-        border-right: 2px solid black;
-        position: absolute;
-        right: 0;
-        top: 75px;
-      }
-
-      .section-two {
-        flex: 2;
-        padding-top: 10px;
-      }
-
-      .section-two img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-      }
-
-      /* 📱 Mobile Fixes */
-      @media (max-width: 600px) {
-        body,
-        main {
-          width: 100% !important;
-          padding: 0 10px !important;
-        }
-
-        .hedaer {
-          height: 48px !important;
-        }
-
-
-
-        .details-row {
-          flex-wrap: nowrap !important;
-          gap: 6px !important;
-        }
-
-        .details_icon {
-          width: 16px !important;
-          height: 16px !important;
-        }
-
-        .details-row p {
-          font-size: 10px !important;
-          line-height: 1.2 !important;
-          white-space: nowrap !important;
-        }
-
-        .person {
-          font-size: 18px !important;
-          line-height: 1.2 !important;
-        }
-
-        .desig {
-          font-size: 10px !important;
-          line-height: 1.2 !important;
-        }
-
-        .section_one {
-          padding-top: 10px !important;
-        }
-
-        .section-two img {
-          max-width: 100% !important;
-          height: auto !important;
-        }
-      }
-    </style>
+  .section-two img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+}
+</style>
   </head>
 
-  <body>
-    <main>
-      <img class="hedaer" src="./assets/header.png" alt="Header" />
-      <h1 class="person">Rick Bacchus</h1>
-      <p class="desig">Global President</p>
+  <body style="margin: 0; padding: 0; box-sizing: border-box; min-height: 100%; overflow-x: hidden;">
+    <div class="content-container" style="margin: 0; padding: 0; box-sizing: border-box;"> 
+        <main style="padding: 0; box-sizing: border-box; max-width: 600px; margin: 0 auto; padding-inline: 60px; width: 100%; font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif; color: black;">
+            <img class="hedaer" src="./assets/header.png" alt="Header" style="margin: 0; padding: 0; box-sizing: border-box; width: 100%; height: auto; object-fit: contain; height: 85px;" height="85">
+            <h1 class="person" style="margin: 0; padding: 0; box-sizing: border-box; font-size: 40px; font-weight: bold; text-transform: uppercase;">Rick Bacchus</h1>
+            <p class="desig" style="margin: 0; padding: 0; box-sizing: border-box; font-size: 22px; font-weight: bolder; text-transform: uppercase;">Global President</p>
 
-      <div class="footer">
-        <div class="section_one">
-          <div class="details-row">
-            <img src="./assets/phone.png" alt="Phone" class="details_icon" />
-            <p>+1 (702) 750-6494</p>
-          </div>
+            <div class="footer" style="margin: 0; padding: 0; box-sizing: border-box; display: flex; justify-content: center; gap: 10px;">
+            <div class="section_one" style="margin: 0; padding: 0; box-sizing: border-box; display: flex; flex-direction: column; align-items: flex-start; gap: 3px; padding-top: 20px; color: black;">
+                <div class="details-row" style="margin: 0; padding: 0; box-sizing: border-box; display: flex; align-items: center; gap: 10px; width: 100%;">
+                <img src="./assets/phone.png" alt="Phone" class="details_icon" style="margin: 0; padding: 0; box-sizing: border-box; flex-shrink: 0; width: 30px; height: 23px; object-fit: contain;" width="30" height="23">
+                <p style="padding: 0; box-sizing: border-box; margin: 0; line-height: 1.5; white-space: nowrap; font-size: 14px; font-weight: bold;">+1 (702) 750-6494</p>
+                </div>
 
-          <div class="details-row">
-            <img src="./assets/usa.png" alt="USA" class="details_icon" />
-            <p>+1 (702) 750-6494</p>
-          </div>
+                <div class="details-row" style="margin: 0; padding: 0; box-sizing: border-box; display: flex; align-items: center; gap: 10px; width: 100%;">
+                <img src="./assets/usa.png" alt="USA" class="details_icon" style="margin: 0; padding: 0; box-sizing: border-box; flex-shrink: 0; width: 30px; height: 23px; object-fit: contain;" width="30" height="23">
+                <p style="padding: 0; box-sizing: border-box; margin: 0; line-height: 1.5; white-space: nowrap; font-size: 14px; font-weight: bold;">+1 (702) 750-6494</p>
+                </div>
 
-          <div class="details-row">
-            <img src="./assets/uae-flag.png" alt="UAE" class="details_icon" />
-            <p>+971 4 123 4567</p>
-          </div>
+                <div class="details-row" style="margin: 0; padding: 0; box-sizing: border-box; display: flex; align-items: center; gap: 10px; width: 100%;">
+                <img src="./assets/uae-flag.png" alt="UAE" class="details_icon" style="margin: 0; padding: 0; box-sizing: border-box; flex-shrink: 0; width: 30px; height: 23px; object-fit: contain;" width="30" height="23">
+                <p style="padding: 0; box-sizing: border-box; margin: 0; line-height: 1.5; white-space: nowrap; font-size: 14px; font-weight: bold;">+971 4 123 4567</p>
+                </div>
 
-          <div class="details-row">
-            <img src="./assets/message.png" alt="Email" class="details_icon" />
-            <p>rick@rhinomotive.com</p>
-          </div>
+                <div class="details-row" style="margin: 0; padding: 0; box-sizing: border-box; display: flex; align-items: center; gap: 10px; width: 100%;">
+                <img src="./assets/message.png" alt="Email" class="details_icon" style="margin: 0; padding: 0; box-sizing: border-box; flex-shrink: 0; width: 30px; height: 23px; object-fit: contain;" width="30" height="23">
+                <p style="padding: 0; box-sizing: border-box; margin: 0; line-height: 1.5; white-space: nowrap; font-size: 14px; font-weight: bold;">rick@rhinomotive.com</p>
+                </div>
 
-          <div class="details-row">
-            <img
-              src="./assets/rhino-logo.png"
-              alt="Website"
-              class="details_icon"
-            />
-            <p>www.rhinomotive.com</p>
-          </div>
-        </div>
+                <div class="details-row" style="margin: 0; padding: 0; box-sizing: border-box; display: flex; align-items: center; gap: 10px; width: 100%;">
+                <img src="./assets/rhino-logo.png" alt="Website" class="details_icon" style="margin: 0; padding: 0; box-sizing: border-box; flex-shrink: 0; width: 30px; height: 23px; object-fit: contain;" width="30" height="23">
+                <p style="padding: 0; box-sizing: border-box; margin: 0; line-height: 1.5; white-space: nowrap; font-size: 14px; font-weight: bold;">www.rhinomotive.com</p>
+                </div>
+            </div>
 
-        <div class="section-two">
-          <img src="./assets/address.png" alt="Office Address" />
-        </div>
-      </div>
-    </main>
+            <div class="section-two" style="margin: 0; padding: 0; box-sizing: border-box; flex: 2; padding-top: 10px;">
+                <img src="./assets/address.png" alt="Office Address" style="margin: 0; padding: 0; box-sizing: border-box; width: 100%; height: 100%; object-fit: contain;">
+            </div>
+            </div>
+        </main>
+    </div>
   </body>
 </html>

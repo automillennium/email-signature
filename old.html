@@ -1,30 +1,40 @@
-<!-- <!DOCTYPE html>
+<!-- 
+
+
+
+
+
+
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Email Signature</title>
     <style>
       * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
       }
-      
-      /* 🟢 FIX 1: Removed fixed width (948px) from body and html */
-      body, html {
-        /* Allow to take up 100% of the viewport width */
-        min-height: 100%; 
+
+      body,
+      html {
+        min-height: 100%;
+        /* NEW: Hide any body overflow to prevent scrollbars */
+        overflow-x: hidden;
       }
 
       main {
+        /* Set max-width to a typical email width for better compatibility */
+        max-width: 600px;
+        margin: 0 auto;
         padding-inline: 60px;
-        /* 🟢 FIX 2: Changed fixed width to flexible width with max-width */
         width: 100%;
-        max-width: 948px; /* Keeps the original design width on large screens */
-        margin: 0 auto; /* Centers the content on large screens */
+        color: black !important;
+        font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
       }
-      
+
       .hedaer {
         width: 100%;
         height: auto;
@@ -34,21 +44,17 @@
 
       .footer {
         display: flex;
-        /* 🟢 Will change to column for mobile via media query */
         justify-content: center;
         gap: 10px;
       }
-      
-      /* --- Remaining CSS (mostly unchanged) --- */
-      
+
       .section_one {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         gap: 3px;
-        font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
-        color: #222;
         padding-top: 20px;
+        color: black !important;
       }
 
       .details-row {
@@ -59,8 +65,8 @@
       }
 
       .details_icon {
-        width: 50px;
-        height: 50px;
+        width: 40px;
+        height: 40px;
         object-fit: contain;
         flex-shrink: 0;
       }
@@ -69,7 +75,7 @@
         margin: 0;
         line-height: 1.5;
         white-space: nowrap;
-        font-size: 8px;
+        font-size: 14px;
         font-weight: bold;
       }
 
@@ -80,9 +86,6 @@
       }
 
       .details-two {
-        display: flex;
-        flex-direction: column;
-        font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
         display: flex;
         flex-direction: column;
         gap: 0px;
@@ -99,19 +102,17 @@
       .section_two {
         flex: 1;
         width: 100%;
-        font-family: Arial, Helvetica, sans-serif;
         padding-top: 50px;
         position: relative;
       }
+
       .person {
-        font-family: Arial, Helvetica, sans-serif;
         font-size: 40px;
-        font: bold;
+        font-weight: bold;
         text-transform: uppercase;
       }
 
       .desig {
-        font-family: Arial, Helvetica, sans-serif;
         font-size: 22px;
         font-weight: bolder;
         text-transform: uppercase;
@@ -124,7 +125,6 @@
 
       .places {
         font-weight: 900;
-        font: bold;
         font-size: 40px;
       }
 
@@ -138,119 +138,136 @@
         top: 75px;
       }
 
-      .section-two{
+      .section-two {
         flex: 2;
         padding-top: 10px;
       }
 
-      .section-two img{
+      .section-two img {
         width: 100%;
         height: 100%;
         object-fit: contain;
       }
-      
-      /* 🟢 FIX 3: Media Query for Mobile Layout */
-      @media (max-width: 768px) {
 
-
+      /* 📱 Mobile Fixes - KEEPING SIDE-BY-SIDE DESIGN */
+      @media (max-width: 600px) {
+        /* Reset mobile body overflow */
+        body {
+            overflow-x: hidden !important;
+        }
+        
         main {
-          padding-inline: 20px; 
+            /* NEW: Set max-width for better email client compatibility */
+            max-width: 400px; 
+            /* Remove padding for max space, we'll use transform */
+            padding-inline: 0 !important;
+            /* Center the content */
+            margin: 0 auto !important; 
+        }
+        
+        /* Apply overall scale to shrink the content and keep the side-by-side layout */
+        /* Use a container for the transform to ensure it scales correctly */
+        .content-container {
+            /* Shrink content to fit typical narrow screens (e.g., 320px) */
+            transform: scale(0.5); 
+            transform-origin: top left;
+            /* NEW: Make the container wider to account for the content being shrunk */
+            width: 200%; 
+            /* NEW: Hide anything that still sticks out */
+            overflow: hidden;
         }
 
-              .hedaer {
 
-        height: 48px;
+        .hedaer {
+          height: 48px !important;
+        }
+
+        /* You can remove or adjust the following if you strictly use transform, 
+        but keeping them helps with text size consistency */
+        .details-row {
+          gap: 6px !important;
+        }
+
+        .details_icon {
+          width: 16px !important;
+          height: 16px !important;
+        }
+
+        .details-row p {
+          font-size: 8px !important;
+          line-height: 1.2 !important;
+        }
+
+        .person {
+          font-size: 18px !important;
+          line-height: 1.2 !important;
+        }
+
+        .desig {
+          font-size: 10px !important;
+          line-height: 1.2 !important;
+        }
+
+        .section_one {
+          padding-top: 10px !important;
+        }
+
+        .section-two img {
+          max-width: 100% !important;
+          height: auto !important;
+        }
       }
-
-    .details-row p {
-
-        font-size: 8px;
-        font-weight: bold;
-      }
-
-    .details-row {
-gap: 0;
-      }
-
-            .details-row img {
-        width: 20px;
-        height: 12px;
-      }
-
-            .person {
-        font-size: 16px;
-
-      }
-
-      .desig {
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 8px;
-
-      }
-
-            .section_one {
-
-        padding-top: 10px;
-      }
-
-      .section-two{
-        flex: 2;
-        padding-top: 0px;
-      }
-        
-
-      }
-
     </style>
   </head>
+
   <body>
-    <main>
-      <img class="hedaer" src="./assets/header.png" alt="" />
-      <h1 class="person">Rick bacchus</h1>
-      <p class="desig">global president</p>
-      <div class="footer">
-        <div class="section_one">
-          <div class="details-row">
-            <img src="./assets/phone.png" alt="Phone" class="details_icon" />
-            <p>+1 (702) 750-6494</p>
-          </div>
+    <div class="content-container"> 
+        <main>
+            <img class="hedaer" src="./assets/header.png" alt="Header" />
+            <h1 class="person">Rick Bacchus</h1>
+            <p class="desig">Global President</p>
 
-          <div class="details-row">
-            <img src="./assets/usa.png" alt="USA" class="details_icon" />
-            <p>+1 (702) 750-6494</p>
-          </div>
+            <div class="footer">
+            <div class="section_one">
+                <div class="details-row">
+                <img src="./assets/phone.png" alt="Phone" class="details_icon" />
+                <p>+1 (702) 750-6494</p>
+                </div>
 
-          <div class="details-row">
-            <img src="./assets/uae-flag.png" alt="UAE" class="details_icon" />
-            <p>+1 (702) 750-6494</p>
-          </div>
+                <div class="details-row">
+                <img src="./assets/usa.png" alt="USA" class="details_icon" />
+                <p>+1 (702) 750-6494</p>
+                </div>
 
-          <div class="details-row">
-            <img src="./assets/message.png" alt="Email" class="details_icon" />
-            <p>rick@rhinomotive.com</p>
-          </div>
+                <div class="details-row">
+                <img src="./assets/uae-flag.png" alt="UAE" class="details_icon" />
+                <p>+971 4 123 4567</p>
+                </div>
 
-          <div class="details-row">
-            <img
-              src="./assets/rhino-logo.png"
-              alt="Website"
-              class="details_icon"
-            />
-            <p>www.rhinomotive.com</p>
-          </div>
-        </div>
-    
-        <div class="section-two">
-            <img src="/assets/address.png" alt="Office Address" />
-        </div>
-      </div>
-    </main>
+                <div class="details-row">
+                <img src="./assets/message.png" alt="Email" class="details_icon" />
+                <p>rick@rhinomotive.com</p>
+                </div>
+
+                <div class="details-row">
+                <img
+                    src="./assets/rhino-logo.png"
+                    alt="Website"
+                    class="details_icon"
+                />
+                <p>www.rhinomotive.com</p>
+                </div>
+            </div>
+
+            <div class="section-two">
+                <img src="./assets/address.png" alt="Office Address" />
+            </div>
+            </div>
+        </main>
+    </div>
   </body>
-</html> -->
-
-
-
-
+</html>
+ -->
 
 
 
