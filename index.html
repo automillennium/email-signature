@@ -1,110 +1,96 @@
-
-
 <!DOCTYPE html>
-<html lang="en" style="margin: 0; padding: 0; box-sizing: border-box; min-height: 100%; overflow-x: hidden;">
-  <head>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Email Signature</title>
-    <style>
-@media (max-width: 600px) {
-  body {
-    overflow-x: hidden !important;
-  }
+    </head>
 
-  main {
-    max-width: 400px;
-    padding-inline: 0 !important;
-    margin: 0 auto !important;
-  }
+<body style="margin: 0; padding: 0;">
 
-  .content-container {
-    transform: scale(0.5);
-    transform-origin: top left;
-    width: 200%;
-    overflow: hidden;
-  }
+    <table border="0" cellpadding="0" cellspacing="0" width="600" style="width: 600px; max-width: 600px;  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif; color: #000000;">
+        <tr>
+            <td style="padding: 0 60px;">
+                <img class="hedaer" src="./assets/header.png" alt="Header" width="100%" height="85" style="display: block; width: 100%; height: 85px; object-fit: contain;">
 
-  .hedaer {
-    height: 48px !important;
-  }
+                <h1 class="person" style="margin: 0; padding: 0; font-size: 40px; font-weight: bold; text-transform: uppercase; line-height: 1.2;">Rick Bacchus</h1>
 
-  .details-row {
-    gap: 6px !important;
-  }
+                <p class="desig" style="margin: 0; padding: 0; font-size: 22px; font-weight: bolder; text-transform: uppercase; line-height: 1.2;">Global President</p>
 
-  .details_icon {
-    width: 16px !important;
-    height: 16px !important;
-  }
+                <table border="0" cellpadding="0" cellspacing="0" width="100%" style="width: 100%; margin-top: 20px;">
+                    <tr>
+                        <td class="section_one" valign="top" width="60%" style="padding-top: 20px; color: #000000;">
 
-  .details-row p {
-    font-size: 8px !important;
-    line-height: 1.2 !important;
-  }
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
 
-  .person {
-    font-size: 18px !important;
-    line-height: 1.2 !important;
-  }
+                                <tr>
+                                    <td width="30" style="padding-right: 10px; padding-bottom: 3px;">
+                                        <img src="./assets/phone.png" alt="Phone" width="30" height="23" style="display: block;">
+                                    </td>
+                                    <td align="left" style="padding-bottom: 3px;">
+                                        <p style="margin: 0; line-height: 1.5; white-space: nowrap; font-size: 14px; font-weight: bold;">
+                                            <a href="tel:+17027506494" style="color: #000000; text-decoration: none;">+1 (702) 750-6494</a>
+                                        </p>
+                                    </td>
+                                </tr>
 
-  .desig {
-    font-size: 10px !important;
-    line-height: 1.2 !important;
-  }
+                                <tr>
+                                    <td width="30" style="padding-right: 10px; padding-bottom: 3px;">
+                                        <img src="./assets/usa.png" alt="USA" width="30" height="23" style="display: block;">
+                                    </td>
+                                    <td align="left" style="padding-bottom: 3px;">
+                                        <p style="margin: 0; line-height: 1.5; white-space: nowrap; font-size: 14px; font-weight: bold;">
+                                            <a href="tel:+17027506494" style="color: #000000; text-decoration: none;">+1 (702) 750-6494</a>
+                                        </p>
+                                    </td>
+                                </tr>
 
-  .section_one {
-    padding-top: 10px !important;
-  }
+                                <tr>
+                                    <td width="30" style="padding-right: 10px; padding-bottom: 3px;">
+                                        <img src="./assets/uae-flag.png" alt="UAE" width="30" height="23" style="display: block;">
+                                    </td>
+                                    <td align="left" style="padding-bottom: 3px;">
+                                        <p style="margin: 0; line-height: 1.5; white-space: nowrap; font-size: 14px; font-weight: bold;">
+                                            <a href="tel:+97141234567" style="color: #000000; text-decoration: none;">+971 4 123 4567</a>
+                                        </p>
+                                    </td>
+                                </tr>
 
-  .section-two img {
-    max-width: 100% !important;
-    height: auto !important;
-  }
-}
-</style>
-  </head>
+                                <tr>
+                                    <td width="30" style="padding-right: 10px; padding-bottom: 3px;">
+                                        <img src="./assets/message.png" alt="Email" width="30" height="23" style="display: block;">
+                                    </td>
+                                    <td align="left" style="padding-bottom: 3px;">
+                                        <p style="margin: 0; line-height: 1.5; white-space: nowrap; font-size: 14px; font-weight: bold;">
+                                            <a href="mailto:rick@rhinomotive.com" style="color: #000000; text-decoration: none;">rick@rhinomotive.com</a>
+                                        </p>
+                                    </td>
+                                </tr>
 
-  <body style="margin: 0; padding: 0; box-sizing: border-box; min-height: 100%; overflow-x: hidden;">
-    <div class="content-container" style="margin: 0; padding: 0; box-sizing: border-box;"> 
-        <main style="padding: 0; box-sizing: border-box; max-width: 600px; margin: 0 auto; padding-inline: 60px; width: 100%; font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif; color: black;">
-            <img class="hedaer" src="./assets/header.png" alt="Header" style="margin: 0; padding: 0; box-sizing: border-box; width: 100%; height: auto; object-fit: contain; height: 85px;" height="85">
-            <h1 class="person" style="margin: 0; padding: 0; box-sizing: border-box; font-size: 40px; font-weight: bold; text-transform: uppercase;">Rick Bacchus</h1>
-            <p class="desig" style="margin: 0; padding: 0; box-sizing: border-box; font-size: 22px; font-weight: bolder; text-transform: uppercase;">Global President</p>
+                                <tr>
+                                    <td width="30" style="padding-right: 10px; padding-bottom: 3px;">
+                                        <img src="./assets/rhino-logo.png" alt="Website" width="30" height="23" style="display: block;">
+                                    </td>
+                                    <td align="left" style="padding-bottom: 3px;">
+                                        <p style="margin: 0; line-height: 1.5; white-space: nowrap; font-size: 14px; font-weight: bold;">
+                                            <a href="http://www.rhinomotive.com" style="color: #000000; text-decoration: none;">www.rhinomotive.com</a>
+                                        </p>
+                                    </td>
+                                </tr>
 
-            <div class="footer" style="margin: 0; padding: 0; box-sizing: border-box; display: flex; justify-content: center; gap: 10px;">
-            <div class="section_one" style="margin: 0; padding: 0; box-sizing: border-box; display: flex; flex-direction: column; align-items: flex-start; gap: 3px; padding-top: 20px; color: black;">
-                <div class="details-row" style="margin: 0; padding: 0; box-sizing: border-box; display: flex; align-items: center; gap: 10px; width: 100%;">
-                <img src="./assets/phone.png" alt="Phone" class="details_icon" style="margin: 0; padding: 0; box-sizing: border-box; flex-shrink: 0; width: 30px; height: 23px; object-fit: contain;" width="30" height="23">
-                <p style="padding: 0; box-sizing: border-box; margin: 0; line-height: 1.5; white-space: nowrap; font-size: 14px; font-weight: bold;">+1 (702) 750-6494</p>
-                </div>
+                            </table>
 
-                <div class="details-row" style="margin: 0; padding: 0; box-sizing: border-box; display: flex; align-items: center; gap: 10px; width: 100%;">
-                <img src="./assets/usa.png" alt="USA" class="details_icon" style="margin: 0; padding: 0; box-sizing: border-box; flex-shrink: 0; width: 30px; height: 23px; object-fit: contain;" width="30" height="23">
-                <p style="padding: 0; box-sizing: border-box; margin: 0; line-height: 1.5; white-space: nowrap; font-size: 14px; font-weight: bold;">+1 (702) 750-6494</p>
-                </div>
+                        </td>
 
-                <div class="details-row" style="margin: 0; padding: 0; box-sizing: border-box; display: flex; align-items: center; gap: 10px; width: 100%;">
-                <img src="./assets/uae-flag.png" alt="UAE" class="details_icon" style="margin: 0; padding: 0; box-sizing: border-box; flex-shrink: 0; width: 30px; height: 23px; object-fit: contain;" width="30" height="23">
-                <p style="padding: 0; box-sizing: border-box; margin: 0; line-height: 1.5; white-space: nowrap; font-size: 14px; font-weight: bold;">+971 4 123 4567</p>
-                </div>
+                        <td class="section-two" valign="top" width="100%" style="padding-top: 20px; padding-left: 10px;">
+                            <img src="./assets/address.png" alt="Office Address" width="100%" height="auto" style="display: block; width: 100%; height: auto; object-fit:cover;">
+                        </td>
 
-                <div class="details-row" style="margin: 0; padding: 0; box-sizing: border-box; display: flex; align-items: center; gap: 10px; width: 100%;">
-                <img src="./assets/message.png" alt="Email" class="details_icon" style="margin: 0; padding: 0; box-sizing: border-box; flex-shrink: 0; width: 30px; height: 23px; object-fit: contain;" width="30" height="23">
-                <p style="padding: 0; box-sizing: border-box; margin: 0; line-height: 1.5; white-space: nowrap; font-size: 14px; font-weight: bold;">rick@rhinomotive.com</p>
-                </div>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
 
-                <div class="details-row" style="margin: 0; padding: 0; box-sizing: border-box; display: flex; align-items: center; gap: 10px; width: 100%;">
-                <img src="./assets/rhino-logo.png" alt="Website" class="details_icon" style="margin: 0; padding: 0; box-sizing: border-box; flex-shrink: 0; width: 30px; height: 23px; object-fit: contain;" width="30" height="23">
-                <p style="padding: 0; box-sizing: border-box; margin: 0; line-height: 1.5; white-space: nowrap; font-size: 14px; font-weight: bold;">www.rhinomotive.com</p>
-                </div>
-            </div>
-
-            <div class="section-two" style="margin: 0; padding: 0; box-sizing: border-box; flex: 2; padding-top: 10px;">
-                <img src="./assets/address.png" alt="Office Address" style="margin: 0; padding: 0; box-sizing: border-box; width: 100%; height: 100%; object-fit: contain;">
-            </div>
-            </div>
-        </main>
-    </div>
-  </body>
+</body>
 </html>
